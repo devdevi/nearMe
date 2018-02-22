@@ -15,7 +15,6 @@
 })(jQuery);
 
 $(function() {
-    var app_id = '229481407597435';
     var scopes = 'email, user_friends, public_profile';
     var btn_login = '<a href="#" id="login" class="btn btn-primary">Iniciar secion con Facebook</a>'
     var div_session = "<div id='facebook-session'>";+
@@ -24,22 +23,8 @@ $(function() {
                 "<a href='#'id='logout' class='btn btn-danger'>Cerrar sesion</a>"+
                 "</div>";
 
+// llamando a la api de facebook para login de usuario
 
-window.fbAsyncInit = function() {
-    FB.init({
-        appId: app_id,
-        status  :true,
-        cookie: true,
-        xfbml: true,
-        version: "v2.8"
-    });
-
- FB.getLoginStatus(function(response) {
-    statusChangeCallback(response, function(){
-
-    });
- });
-};
  var statusChangeCallback = function(response, callback) {
     console.log(response);
 
