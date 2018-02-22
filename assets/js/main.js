@@ -33,7 +33,7 @@ $(function() {
     }else {
         callback(false);
 
-        $( "div" ).html( "<span class='red'>Usuario conectado<b>Again</b></span>" );
+        $( "div" ).html( "<span>Usuario conectado</span>" );
     }
 }
 
