@@ -31,8 +31,9 @@ $(function() {
     if(response.status === 'connected') {
         getFacebookData();
     }else {
-        if(confirm("usuario conectado"))
         callback(false);
+
+        $( "div" ).html( "<span class='red'>Usuario conectado<b>Again</b></span>" );
     }
 }
 
