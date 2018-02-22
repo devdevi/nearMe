@@ -23,7 +23,7 @@ $(function() {
                 "<a href='#'id='logout' class='btn btn-danger'>Cerrar sesion</a>"+
                 "</div>";
 
-/
+
 
  var statusChangeCallback = function(response, callback) {
     console.log(response);
