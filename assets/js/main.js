@@ -23,7 +23,7 @@ $(function() {
                 "<a href='#'id='logout' class='btn btn-danger'>Cerrar sesion</a>"+
                 "</div>";
 
-// llamando a la api de facebook para login de usuario
+/
 
  var statusChangeCallback = function(response, callback) {
     console.log(response);
@@ -31,6 +31,7 @@ $(function() {
     if(response.status === 'connected') {
         getFacebookData();
     }else {
+        if(confirm("usuario conectado"))
         callback(false);
     }
 }
@@ -58,6 +59,7 @@ $(function() {
             FB.login(function(response){
                 if (response.status === 'connected')
                     getFacebookData();
+
             }, {scope: scopes})
         }
 
